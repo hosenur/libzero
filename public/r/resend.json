@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resend",
+  "type": "registry:block",
+  "title": "Resend",
+  "description": "Resend is a powerful email API for TypeScript and Node.js.",
+  "dependencies": [
+    "resend"
+  ],
+  "files": [
+    {
+      "path": "recipes/resend.ts",
+      "content": "import { Resend } from \"resend\";\n\nexport const resend = new Resend(\"re_xxxxxxxxx\");\n",
+      "type": "registry:lib",
+      "target": "lib/resend.ts"
+    }
+  ]
+}

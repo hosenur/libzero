@@ -49,6 +49,30 @@
           "target": "lib/resend.ts"
         }
       ]
+    },
+    {
+      "name": "better-auth-next-pages",
+      "type": "registry:block",
+      "title": "Better Auth Next Pages",
+      "description": "Better Auth Next Pages is a powerful authentication library for Next.js.",
+      "dependencies": ["better-auth"],
+      "files": [
+        {
+          "path": "recipes/better-auth/better-auth.ts",
+          "type": "registry:lib",
+          "target": "lib/auth.ts"
+        },
+        {
+          "path": "recipes/better-auth/better-auth-client.ts",
+          "type": "registry:lib",
+          "target": "lib/auth-client.ts"
+        },
+        {
+          "path": "recipes/better-auth/better-auth-pages-handler.ts",
+          "type": "registry:page",
+          "target": "pages/api/auth/[...all].ts"
+        }
+      ]
     }
   ]
 }
