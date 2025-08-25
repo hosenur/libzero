@@ -11,7 +11,7 @@
   ],
   "files": [
     {
-      "path": "recipes/react-email.tsx",
+      "path": "libraries/react-email.tsx",
       "content": "import { Button, Html } from \"@react-email/components\";\nimport * as React from \"react\";\n\nexport default function Email() {\n  return (\n    <Html>\n      <Button\n        href=\"https://example.com\"\n        style={{ background: \"#000\", color: \"#fff\", padding: \"12px 20px\" }}\n      >\n        Click me\n      </Button>\n    </Html>\n  );\n}",
       "type": "registry:file",
       "target": "email/my-email.tsx"

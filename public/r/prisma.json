@@ -9,13 +9,13 @@
   ],
   "files": [
     {
-      "path": "recipes/prisma.ts",
+      "path": "libraries/prisma.ts",
       "content": "import { PrismaClient } from \"@/generated/prisma\";\n\nexport const prisma = new PrismaClient();\n",
       "type": "registry:lib",
       "target": "lib/prisma.ts"
     },
     {
-      "path": "recipes/schema.prisma",
+      "path": "libraries/schema.prisma",
       "content": "generator client {\n  provider = \"prisma-client\"\n  output   = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n",
       "type": "registry:file",
       "target": "prisma/schema.prisma"

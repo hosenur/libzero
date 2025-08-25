@@ -9,19 +9,19 @@
   ],
   "files": [
     {
-      "path": "recipes/better-auth/better-auth.ts",
+      "path": "libraries/better-auth/better-auth.ts",
       "content": "import { betterAuth } from \"better-auth\";\n\nexport const auth = betterAuth({\n  emailAndPassword: {\n    enabled: true,\n  },\n});\n",
       "type": "registry:lib",
       "target": "lib/auth.ts"
     },
     {
-      "path": "recipes/better-auth/better-auth-client.ts",
+      "path": "libraries/better-auth/better-auth-client.ts",
       "content": "import { createAuthClient } from \"better-auth/react\";\nexport const authClient = createAuthClient({\n  baseURL: \"http://localhost:3000\",\n});\n",
       "type": "registry:lib",
       "target": "lib/auth-client.ts"
     },
     {
-      "path": "recipes/better-auth/better-auth-pages-handler.ts",
+      "path": "libraries/better-auth/better-auth-pages-handler.ts",
       "content": "import { toNodeHandler } from \"better-auth/node\"\nimport { auth } from \"@/lib/auth\"\n \n// Disallow body parsing, we will parse it manually\nexport const config = { api: { bodyParser: false } }\n \nexport default toNodeHandler(auth.handler)",
       "type": "registry:page",
       "target": "pages/api/auth/[...all].ts"

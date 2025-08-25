@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "resend",
+  "name": "resend-vite",
   "type": "registry:block",
   "title": "Resend",
   "description": "Resend is a powerful email API for TypeScript and Node.js.",
@@ -9,8 +9,8 @@
   ],
   "files": [
     {
-      "path": "libraries/resend/resend-next.ts",
-      "content": "import { Resend } from \"resend\";\n\nexport const resend = new Resend(process.env.RESEND_API_KEY);\n",
+      "path": "libraries/resend/resend-vite.ts",
+      "content": "import { Resend } from \"resend\";\n\nexport const resend = new Resend(import.meta.env.RESEND_API_KEY);\n",
       "type": "registry:lib",
       "target": "lib/resend.ts"
     }

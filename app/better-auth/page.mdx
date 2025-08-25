@@ -1,14 +1,30 @@
+import { Tabs } from "nextra/components";
+
+
 # Better Auth
 The most comprehensive authentication framework for TypeScript.
 
 Better Auth can be installed in your framework specific application. Use the appropriate installation command for your framework. All of the installation steps are from the official library documentaition. 
 
-##### Next.js Pages Router
-```sh copy
-bun x --bun shadcn@latest add "https://lib0.vercel.app/r/better-auth-next-pages.json"
-```
+## Next.js
 
-##### Next.js App Router
-```sh copy
+You can setup `better-auth` in both app and pages router in your Next.js application. Run your router specific command from below.
+
+<Tabs items={["Pages Router", "App Router"]}>
+  <Tabs.Tab>
+  ```sh copy
+bun x --bun shadcn@latest add "https://lib0.vercel.app/r/better-auth-next-pages.json"
+  ```
+
+  </Tabs.Tab>
+  <Tabs.Tab>
+  ```sh copy
 bun x --bun shadcn@latest add "https://lib0.vercel.app/r/better-auth-next-app.json"
-```
+  ```
+
+  </Tabs.Tab>
+</Tabs>
+
+
+## Hono
+## Express

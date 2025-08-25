@@ -4,6 +4,35 @@
   "homepage": "http://localhost:3000",
   "items": [
     {
+      "name": "twilio-vite",
+      "type": "registry:block",
+      "title": "Twilio",
+      "description": "Twilio is a powerful SMS and voice API for TypeScript and Node.js.",
+      "dependencies": ["twilio"],
+      "files": [
+        {
+          "path": "libraries/twilio/twilio-vite.ts",
+          "type": "registry:lib",
+          "target": "lib/twilio.ts"
+        }
+      ]
+    },
+    {
+      "name": "twilio",
+      "type": "registry:block",
+      "title": "Twilio",
+      "description": "Twilio is a powerful SMS and voice API for TypeScript and Node.js.",
+      "dependencies": ["twilio"],
+      "files": [
+        {
+          "path": "libraries/twilio/twilio.ts",
+          "type": "registry:lib",
+          "target": "lib/twilio.ts"
+        }
+      ]
+    },
+    
+    {
       "name": "react-email",
       "type": "registry:block",
       "title": "React Email",
@@ -11,7 +40,7 @@
       "dependencies": ["@react-email/components", "react", "react-dom"],
       "files": [
         {
-          "path": "recipes/react-email.tsx",
+          "path": "libraries/react-email.tsx",
           "type": "registry:file",
           "target": "email/my-email.tsx"
         }
@@ -25,28 +54,31 @@
       "dependencies": ["prisma"],
       "files": [
         {
-          "path": "recipes/prisma.ts",
+          "path": "libraries/prisma.ts",
           "type": "registry:lib",
           "target": "lib/prisma.ts"
         },
         {
-          "path": "recipes/schema.prisma",
+          "path": "libraries/schema.prisma",
           "type": "registry:file",
           "target": "prisma/schema.prisma"
         }
-      ]
+      ],
+      "envVars": {
+        "DATABASE_URL": "postgresql://postgres:postgres@localhost:5432/postgres"
+      }
     },
     {
-      "name": "twilio",
+      "name": "resend-vite",
       "type": "registry:block",
-      "title": "Twilio",
-      "description": "Twilio is a powerful SMS and voice API for TypeScript and Node.js.",
-      "dependencies": ["twilio"],
+      "title": "Resend",
+      "description": "Resend is a powerful email API for TypeScript and Node.js.",
+      "dependencies": ["resend"],
       "files": [
         {
-          "path": "recipes/twilio.ts",
+          "path": "libraries/resend/resend-vite.ts",
           "type": "registry:lib",
-          "target": "lib/twilio.ts"
+          "target": "lib/resend.ts"
         }
       ]
     },
@@ -58,7 +90,7 @@
       "dependencies": ["resend"],
       "files": [
         {
-          "path": "recipes/resend.ts",
+          "path": "libraries/resend/resend-next.ts",
           "type": "registry:lib",
           "target": "lib/resend.ts"
         }
@@ -72,17 +104,17 @@
       "dependencies": ["better-auth"],
       "files": [
         {
-          "path": "recipes/better-auth/better-auth.ts",
+          "path": "libraries/better-auth/better-auth.ts",
           "type": "registry:lib",
           "target": "lib/auth.ts"
         },
         {
-          "path": "recipes/better-auth/better-auth-client.ts",
+          "path": "libraries/better-auth/better-auth-client.ts",
           "type": "registry:lib",
           "target": "lib/auth-client.ts"
         },
         {
-          "path": "recipes/better-auth/better-auth-pages-handler.ts",
+          "path": "libraries/better-auth/better-auth-pages-handler.ts",
           "type": "registry:page",
           "target": "pages/api/auth/[...all].ts"
         }

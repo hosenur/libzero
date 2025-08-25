@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "twilio",
+  "name": "twilio-vite",
   "type": "registry:block",
   "title": "Twilio",
   "description": "Twilio is a powerful SMS and voice API for TypeScript and Node.js.",
@@ -9,8 +9,8 @@
   ],
   "files": [
     {
-      "path": "libraries/twilio/twilio.ts",
-      "content": "import t from \"twilio\";\nconst accountSid = process.env.TWILIO_ACCOUNT_SID;\nconst authToken = process.env.TWILIO_AUTH_TOKEN;\nexport const twilio = t(accountSid, authToken);\n",
+      "path": "libraries/twilio/twilio-vite.ts",
+      "content": "import t from \"twilio\";\nconst accountSid = import.meta.env.TWILIO_ACCOUNT_SID\nconst authToken = import.meta.env.TWILIO_AUTH_TOKEN\nexport const twilio = t(accountSid, authToken);\n",
       "type": "registry:lib",
       "target": "lib/twilio.ts"
     }
