@@ -1,0 +1,40 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "zero",
+  "homepage": "http://localhost:3000",
+  "items": [
+    {
+      "name": "prisma",
+      "type": "registry:block",
+      "title": "Prisma",
+      "description": "Prisma is a powerful ORM for TypeScript and Node.js.",
+      "dependencies": ["prisma"],
+      "files": [
+        {
+          "path": "recipes/prisma.ts",
+          "type": "registry:lib",
+          "target": "lib/prisma.ts"
+        },
+        {
+          "path": "recipes/schema.prisma",
+          "type": "registry:file",
+          "target": "prisma/schema.prisma"
+        }
+      ]
+    },
+    {
+      "name": "twilio",
+      "type": "registry:block",
+      "title": "Twilio",
+      "description": "Twilio is a powerful SMS and voice API for TypeScript and Node.js.",
+      "dependencies": ["twilio"],
+      "files": [
+        {
+          "path": "recipes/twilio.ts",
+          "type": "registry:lib",
+          "target": "lib/twilio.ts"
+        }
+      ]
+    }
+  ]
+}

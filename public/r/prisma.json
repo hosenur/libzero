@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "prisma",
+  "type": "registry:block",
+  "title": "Prisma",
+  "description": "Prisma is a powerful ORM for TypeScript and Node.js.",
+  "dependencies": [
+    "prisma"
+  ],
+  "files": [
+    {
+      "path": "recipes/prisma.ts",
+      "content": "import { PrismaClient } from \"@/generated/prisma\";\n\nexport const prisma = new PrismaClient();\n",
+      "type": "registry:lib",
+      "target": "lib/prisma.ts"
+    },
+    {
+      "path": "recipes/schema.prisma",
+      "content": "generator client {\n  provider = \"prisma-client\"\n  output   = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n",
+      "type": "registry:file",
+      "target": "prisma/schema.prisma"
+    }
+  ]
+}
