@@ -4,6 +4,20 @@
   "homepage": "http://localhost:3000",
   "items": [
     {
+      "name": "react-email",
+      "type": "registry:block",
+      "title": "React Email",
+      "description": "Build and send emails using React and TypeScript.",
+      "dependencies": ["@react-email/components", "react", "react-dom"],
+      "files": [
+        {
+          "path": "recipes/react-email.tsx",
+          "type": "registry:file",
+          "target": "email/my-email.tsx"
+        }
+      ]
+    },
+    {
       "name": "prisma",
       "type": "registry:block",
       "title": "Prisma",
