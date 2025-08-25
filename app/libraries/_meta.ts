@@ -5,8 +5,12 @@ const META = {
   resend: {
     title: "Resend",
   },
-  'better-auth': {
+  "better-auth": {
     title: "Better Auth",
+  },
+
+  twilio: {
+    title: "Twilio",
   },
 };
 export default META;
