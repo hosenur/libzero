@@ -3,8 +3,8 @@ import { Head } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
 import "nextra-theme-docs/style.css";
 import { Metadata } from "next";
-import { Geist } from "next/font/google";
-const geist = Geist({ subsets: ["latin"] });
+import { Rethink_Sans } from "next/font/google";
+const rethink = Rethink_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   // Define your metadata here
@@ -38,7 +38,7 @@ export default async function RootLayout({
       >
         {/* Your additional tags should be passed as `children` of `<Head>` element */}
       </Head>
-      <body className={geist.className}>
+      <body className={rethink.className}>
         <Layout
           navbar={navbar}
           pageMap={await getPageMap()}
