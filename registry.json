@@ -35,6 +35,20 @@
           "target": "lib/twilio.ts"
         }
       ]
+    },
+    {
+      "name": "resend",
+      "type": "registry:block",
+      "title": "Resend",
+      "description": "Resend is a powerful email API for TypeScript and Node.js.",
+      "dependencies": ["resend"],
+      "files": [
+        {
+          "path": "recipes/resend.ts",
+          "type": "registry:lib",
+          "target": "lib/resend.ts"
+        }
+      ]
     }
   ]
 }
