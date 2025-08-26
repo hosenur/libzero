@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pinecone",
+  "type": "registry:block",
+  "title": "Pinecone",
+  "description": "Pinecone Vector Database",
+  "dependencies": [
+    "@pinecone-database/pinecone"
+  ],
+  "files": [
+    {
+      "path": "libraries/pinecone/pinecone.ts",
+      "content": "import { Pinecone } from \"@pinecone-database/pinecone\";\nif (!process.env.PINECONE_API_KEY) {\n  throw new Error(\"PINECONE_API_KEY is not set\");\n}\nexport const pc = new Pinecone({\n  apiKey: process.env.PINECONE_API_KEY,\n});\n",
+      "type": "registry:lib",
+      "target": "lib/pinecone.ts"
+    }
+  ]
+}

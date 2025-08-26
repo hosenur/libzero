@@ -31,7 +31,7 @@
         }
       ]
     },
-    
+
     {
       "name": "react-email",
       "type": "registry:block",
@@ -117,6 +117,23 @@
           "path": "libraries/better-auth/better-auth-pages-handler.ts",
           "type": "registry:page",
           "target": "pages/api/auth/[...all].ts"
+        }
+      ]
+    },
+    {
+      "name": "pinecone",
+      "type": "registry:block",
+      "title": "Pinecone",
+      "description": "Pinecone Vector Database",
+      "dependencies": ["@pinecone-database/pinecone"],
+      "envVars": {
+        "PINECONE_API_KEY": "YOUR_API_KEY"
+      },
+      "files": [
+        {
+          "path": "libraries/pinecone/pinecone.ts",
+          "type": "registry:lib",
+          "target": "lib/pinecone.ts"
         }
       ]
     }
