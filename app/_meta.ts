@@ -21,8 +21,11 @@ const META = {
   twilio: {
     title: "Twilio",
   },
-  supabase:{
-    title: "Supabase"
+  supabase: {
+    title: "Supabase",
+  },
+  pinecone: {
+    title: "Pinecone",
   },
   recipes: {
     type: "separator",
