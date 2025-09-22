@@ -5,7 +5,8 @@ import "nextra-theme-docs/style.css";
 import { Metadata } from "next";
 import { Rethink_Sans } from "next/font/google";
 const rethink = Rethink_Sans({ subsets: ["latin"] });
-import "@/app/globals.css"
+import "@/app/globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   // Define your metadata here
@@ -13,7 +14,9 @@ export const metadata: Metadata = {
 };
 
 const navbar = <Navbar logo={<b className="font-mono">LIB0</b>} />;
-const footer = <Footer className="">MIT {new Date().getFullYear()} © LIB0.</Footer>;
+const footer = (
+  <Footer className="">MIT {new Date().getFullYear()} © LIB0.</Footer>
+);
 
 export default async function RootLayout({
   children,
@@ -38,10 +41,11 @@ export default async function RootLayout({
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/hosenur/lib0"
           footer={footer}
-          sidebar={{toggleButton:false}}
+          sidebar={{ toggleButton: false }}
         >
           {children}
         </Layout>
+        <Analytics />
       </body>
     </html>
   );
